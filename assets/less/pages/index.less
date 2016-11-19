@@ -1,0 +1,865 @@
+#SportolutionsApp {
+  margin: 0;
+  padding: 0;
+
+.site-head {
+  // .bg-img('hero-img.jpg');
+  // -ms-behavior: url(/assets/ie8-support/backgroundsize.min.htc);
+
+  max-width:1920px;
+  // height: 750px;
+  position: relative;
+}
+
+#carousel-top {
+
+ .carousel-indicators {
+    left: 0%;
+    width: 100%;
+    margin-left: 0;
+    padding: 0px;
+    z-index: 4;
+    li {
+      display: inline-block;
+      width: 14%;
+      height: 1px;
+      margin: 0px;
+      border: none;
+      cursor: pointer;
+      background-color: #fff;
+      border-radius: 0px;
+    }
+  }
+
+  .carousel-caption {
+    .hero-logo{
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-end;
+      align-items: center;
+
+      // height: 600px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+
+      small {
+        font-family: 'HelveticaBoldOblique', sans-serif;
+        font-size: .9em;
+        font-weight: normal;
+        letter-spacing: 1.5px;
+        position: relative;
+        left: -40px;
+        top: 18px;
+      }
+
+      h2 {
+        font-size: 2.5em;
+        margin: 20px 0;
+        margin-bottom: 0;
+      }
+      span {
+        font-size:1.642em;
+        width: 100%;
+      }
+
+      .btn-large {
+        margin-top: 40px;
+        height: 60px;
+        text-shadow: none;
+        a {
+          padding: 20px 40px;
+          background-color: @accent;
+          color:#000;
+          font-size: 1.071em;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+#carousel-top .carousel-indicators .active {
+  background-color: #8dc63f;
+}
+
+
+.top-menu {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  .navbar {
+    background-color: #000;
+    border: 0;
+    border-radius: 0;
+    margin: 20px;
+    margin-bottom: 0;
+    height: 90px;
+    
+    .horizontal-nav {
+      float: right;
+    }
+  }
+}
+
+.main-logo img {
+  margin-top: 15px;
+  margin-left: 15px;
+  max-height: 60%;
+}
+// site-head
+
+// site-slider
+.site-slider {
+  .bg-icons('bg-icons.jpg');
+  -ms-behavior: url(/assets/ie8-support/backgroundsize.min.htc);
+  max-width:1920px;
+  height: 225px;
+}
+
+.icons-slider {
+  height: 0;
+}
+
+.control-slider {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  // margin-top: 25px;
+  margin: 15px 0 10px;
+  height: 15px;
+  & a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  p {
+    text-transform: uppercase;
+    margin: 0 15px;
+    line-height: 1;
+    letter-spacing: 1px;
+
+    font: 1em 'HelveticaBold', sans-serif;
+    color:#646464;
+    span {
+      color: #fff;
+    }
+    span:last-child {
+      color:#646464;
+    }
+  }
+}
+
+#owl-slider {
+  overflow: hidden;
+  .owl-wrapper-outer {
+    right: -2px;
+  }
+}
+
+#owl-slider .item {
+  .transition();
+  padding: 65px 10px;
+  text-align: center;
+  height: 170px;
+  border-right: 1px solid #545454;
+  cursor: pointer;
+
+  &:hover {
+    padding-top: 10px;
+  }
+
+  img {
+    display: inline-block;
+  }
+
+  .showHide-tickets {
+    .transition(@time:1s);
+    opacity:0;
+    font-family: 'Helvetica', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+
+    h3 {
+      font-size: 1em;
+      margin-bottom: 7px;
+    }
+    span {
+      display: block;
+      color: #a5a5a5;
+      font-size: .714em;
+      margin-bottom: 3px;
+    }
+    p {
+      color: #a5a5a5;
+      margin-bottom: 7px;
+    }
+
+    button {
+      text-transform: uppercase;
+      padding: 8px 15px;
+      background-color: @accent;
+      border: none;
+      color: #363636;
+      font:.857em 'HelveticaBold', sans-serif;
+      line-height: 1;
+      position: relative;
+
+      span:first-child {
+        position: absolute;
+        top: 10px;
+        left: 42px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid #363636;
+        border-right: 3px solid transparent;
+        border-left: 3px solid transparent;
+      }
+    }
+  }
+
+  &:hover .showHide-tickets {
+    opacity:1;
+  }
+}
+
+.owl-item:nth-child(2n+1) {
+    
+    &:after {
+      .slider-logo('slider-logo.png');
+      .transition(@time:1s);
+      opacity: 1;
+      content: "";
+      position: absolute;
+      top: 130px;
+      left: 20px;
+      width: 110px;
+      height: 37px;
+      cursor:pointer;
+    }
+
+    &:hover:after {
+      opacity: 0;
+    }
+}
+// site-slider
+
+
+.site-main {
+  max-width:1920px;
+  height: 510px;
+  background-color: @font;
+  color:#000;
+  font-size: 1.285em;
+
+  .card-row {
+    // margin-bottom: 145px;
+    // position: relative;
+  }
+
+  .main-image {
+    margin-top: 20px;
+    position: relative;
+    height: 265px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 210px;
+      left: 105px;
+      .main-logo('main-logo.png');
+      width: 158px;
+      height: 50px;
+    }
+
+  }
+
+  .img-description {
+    height: 145px;
+    position: relative;
+    // top: 265px;
+    background-color: #fff;
+    padding:15px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    cursor: pointer;
+
+    h4 {
+      margin: 0;
+      color:#969696;
+      margin-bottom: 5px;
+    }
+
+    .hidden-description {
+      background-color: #000;
+      color:#fff;
+      padding: 15px;
+      position: absolute;
+      top: -100px;
+      left: 0;
+      height: 245px;
+      z-index:1;
+      line-height: 1.3;
+      overflow: hidden;
+
+      transition:visibility 1s, opacity 1s;
+      // visibility:hidden;
+      opacity:0;
+
+      &.visible {
+        opacity:1;
+      }
+
+      h4 {
+        font-size: 1em;
+        color:#fff;
+        margin-bottom: 15px;
+        line-height: 1.1;
+        span {
+          color: #707070;
+          font-size: .9em;
+        }
+      }
+      p {
+        font-family: 'Helvetica', sans-serif;
+        font-size: .666em;
+        margin: 0;
+      }
+    }
+
+    // &:hover .hidden-description {
+    //   visibility:visible;
+    //   opacity:1;
+    // }
+  }
+
+  .text-muted {
+    .h-style();
+    color: #898989;
+    font: 1.214em Arial;
+    border-top: 1px solid #969696;
+    border-bottom: 1px solid #969696;
+    margin: 15px 0 0;
+    padding:15px 0;
+    
+  }
+}// site-main
+
+
+.site-footer {
+  .footer-img('matches.jpg');
+  -ms-behavior: url(/assets/ie8-support/backgroundsize.min.htc);
+  max-width:1920px;
+  // height: 785px;
+  height: auto;
+  color: #b6b6b6;
+
+  .text-muted {
+    .h-style();
+    color: #fff;
+    font-size: 1.5em;
+  }
+  .table-responsive {
+    border:none;
+  }
+  table {
+    font-family: Arial;
+    font-size: .928em;
+    font-weight: normal;
+    line-height: 2;
+    width: 100%;
+    margin-bottom: 50px;
+
+    .grey-column {
+      background: #ececec;
+    }
+    tr td {
+      padding: 5px 0;
+    }
+    thead tr {
+      background-color: #363636;
+      color: #fff;
+      font-weight: bold;
+    }
+    thead tr th {
+      border:none;
+      padding: 10px 0;
+      padding-left: 13px;
+      text-align: left;
+    }
+    tbody tr {
+      background: #fff;
+    }
+    tbody tr:hover {
+      color: #000;
+      cursor: pointer;
+    }
+    tbody tr td {
+      border: none;
+      padding-left: 13px;
+      background-color: transparent;
+    }
+    .last-row td {
+      padding-bottom: 35px;
+    }
+    .number-team {
+      padding-left: 25px;
+      width: 1px;
+    }
+    .name-team {
+      font-weight: bold;
+      width: 1px;
+      padding-right: 20px;
+    }
+
+    .container-games {
+      padding: 2px 5px 0 2px;
+      min-width: 70px;
+      width: 120px;
+
+      .total-games {
+        padding-left: 7px;
+        div:after {
+          float: left;
+          display: block;
+          content: "";
+          width: 12px;
+          height: 17px;
+          margin-top: 1px;
+          margin-left: 1px;
+        }
+        .winner:after {
+          background-color: #008000;
+        }
+        .draw:after {
+          background-color: #ffa500;
+        }
+        .loser:after {
+          background-color: #ff0000;
+        }
+      }
+    }
+
+  }
+}// site-footer
+
+}// SportolutionsApp
+
+// Responsive CSS
+
+@media (max-width:1200px) {
+#SportolutionsApp {
+  .top-menu {
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: 0;
+      z-index: 9;
+      width: 100%;
+    }
+
+    .main-nav-trigger {
+      margin-top: 15px;
+      margin-right: 15px;
+      display: block;
+      // font-family: Arial Unicode MS, Lucida Sans Unicode, sans-serif;
+    }
+
+    .navbar .horizontal-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      z-index: 5;
+
+      li {
+        width: 100%;
+        display: block;
+        margin-left: 0;
+        text-align: center;
+        border-bottom: 1px solid lighten(#232222, 5%);
+        &:hover {
+          background:none;
+        }
+      }
+
+      a {
+        display: inline-block;
+        padding: 18px 30px;
+        &.active {
+          background:none;
+          color:  @accent;
+        }
+        &:hover {
+          color:  @accent;
+          background:none;
+        }
+      }
+    }
+  }
+
+  #owl-slider .item {
+    .showHide-tickets {
+      font-size: 85%;
+      button {
+        padding: 7px 12px;
+        span:first-child {
+          top: 9px;
+          left: 35px;
+        }
+      }
+    }
+  }
+
+  #owl-slider .item:hover {
+    padding-top: 5px;
+  }
+
+  .owl-item {
+    &:after {
+      display: none;
+    }
+  }
+  .card-row {
+
+    .main-image:after {
+      display: none;
+    }
+    .img-description {
+      .hidden-description {
+        line-height: 1.1;
+        h4 {
+          font-size: .81em;
+        }
+      }
+    }
+  }
+}
+}
+
+@media (max-width:1020px) {
+  #SportolutionsApp {
+    .control-slider span:first-child {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width:992px) {
+#SportolutionsApp {
+  #carousel-top {
+    .carousel-caption {
+      .hero-logo {
+        line-height: 1.5;
+        small {
+          font-size:.8em;
+          left: -22px;
+        }
+        // img {
+        //   width: 200px;
+        // }
+        h2 {
+          font-size: 1.8em;
+          margin: 17px 0 0;
+        }
+        span {
+          font-size: 1.2em;
+        }
+        .btn-large {
+          margin-top: 25px;
+          height: 35px;
+          a {
+            font-size: 1em;
+            padding: 13px 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .top-menu {
+    .navbar {
+      margin: 0;
+      height: 65px;
+
+      // img {
+      //   width: 148px;
+      // }
+      .horizontal-nav a {
+        font-size: .9em;
+        padding: 15px 30px;
+      }
+    }
+    .main-logo img,
+    .main-nav-trigger {
+      margin: 7px;
+      font-size: 40px;
+    }
+  }
+
+  .site-slider {
+    .item {
+      padding-top: 15px !important;
+      .showHide-tickets {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .site-main {
+    height: auto;
+    .card-row {
+      .img-description {
+        // text-align: left;
+        // width: 275px;
+        .hidden-description {
+          line-height: 1.4;
+          top: -55px;
+          height: 200px;
+          h4 {
+            font-size: .91em;
+          }
+        }
+      }
+    }
+    .text-muted {
+      height: 50px;
+      padding: 15px 0;
+    }
+  }
+  
+  .site-footer {
+    table {
+      font-size: .85em;
+
+      .grey-column {
+        padding-right: 20px;
+      }
+      .number-team {
+        padding-right: 0;
+      }
+    }
+  }
+}
+}
+/* Small Devices, Tablets */
+// @media only screen and (min-width : 768px) {
+//   #carousel-top {
+//     .carousel-caption {
+//       .hero-logo {
+//         small {
+//           left: -35px;
+//           font-size: .7em;
+//         }
+//         img {
+//           width: 220px;
+//         }
+//         h2 {
+//           margin: 10px 0 0;
+//           font-size: 1.9em;
+//         }
+//         span {
+//           font-size: 1.3em;
+//           padding: 7px;
+//         }
+//         .btn-large {
+//           margin-top: 30px;
+//           height: 42px;
+//           a {
+//             padding: 15px 30px;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .control-slider {
+//     margin: 15px 0 10px;
+//   }
+ 
+// }
+
+@media (max-width:768px) {
+#SportolutionsApp {
+  .top-menu {
+    .navbar {
+      height: 55px;
+
+      // img {
+      //   width: 170px;
+      // }
+      .horizontal-nav a {
+        font-size: .8em;
+        padding: 10px 30px;
+      }
+      .main-nav-trigger {
+        font-size: 30px;
+      }
+    }
+  }
+
+  #carousel-top {
+    // .item > img {
+    //   height: 350px;
+    // }
+    .carousel-caption {
+      .hero-logo {
+        small {
+          left: -27px;
+          font-size: .7em;
+        }
+        img {
+          width: 200px;
+        }
+        h2 {
+          margin: 10px 0 0;
+          font-size: 1.6em;
+        }
+        span {
+          font-size: 1em;
+          padding: 7px;
+        }
+        .btn-large {
+          margin-top: 20px;
+          height: 30px;
+          a {
+            font-size: 1em;
+            padding: 13px 23px;
+          }
+        }
+      }
+    }
+  }
+
+  .site-main {
+    .hidden-description {
+      height: 240px;
+    }
+    .text-muted {
+      font-size: 1em;
+    }
+  }
+  
+  .site-footer {
+    table {
+      font-size: .8em;
+    }
+    .text-muted {
+      font-size: 1em;
+    }
+  }
+}
+}
+
+@media (max-width:670px) {
+#SportolutionsApp {
+  #carousel-top {
+    .item > img {
+      height: 370px;
+    }
+    .carousel-caption {
+      .hero-logo {
+        small {
+          left: -20px;
+        }
+        img {
+          width: 170px;
+        }
+        h2 {
+          margin: 0;
+          font-size: 1.3em;
+        }
+        span {
+          font-size: .8em;
+          line-height: 1.5;
+        }
+        .btn-large {
+          margin-top: 10px;
+          a {
+            font-size: .7em;
+            padding: 10px 18px;
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+@media (max-width:480px) {
+#SportolutionsApp {
+  .top-menu {
+    .navbar {
+      height: 45px;
+
+      .main-logo img {
+        // width: 140px;
+        margin: 7px;
+      }
+    }
+  }
+  #carousel-top {
+    .item > img {
+      height: 300px;
+    }
+    .carousel-caption {
+      .hero-logo {
+        small {
+          font-size: .6em;
+        }
+      }
+    }
+  }
+}
+}
+
+
+@media (max-width:320px) {
+#SportolutionsApp {
+  .top-menu {
+    .navbar {
+      height: 42px;
+      .main-nav-trigger {
+        font-size: 25px;
+      }
+      .horizontal-nav a {
+        font-size: .7em;
+      }
+    }
+  }
+
+  #carousel-top {
+    .carousel-caption {
+      .hero-logo {
+        small {
+          top: 14px; 
+          left: -15px;
+          font-size: .6em;
+        }
+        img {
+          width: 150px;
+        }
+        h2 {
+          margin: 0;
+         font-size: 1.2em;
+        }
+        span {
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
+}

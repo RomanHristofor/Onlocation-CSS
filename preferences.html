@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Lucozade</title>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+		<link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+		<link href="assets/css/style.css" rel="stylesheet">
+			<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+			<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+			<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+	<div id="SportolutionsApp">
+		<section class="site-preferences">
+			<div class="container">
+				<div class="row">
+					<div class="top-menu">
+						<nav class="navbar">
+							<a href="/" class="main-logo">
+								<img src="assets/img/logo.png" alt="MLFB">
+							</a>
+							<i class="fa fa-bars main-nav-trigger trigger-nav" aria-hidden="true"></i>
+							<ul class="horizontal-nav trigger-victim">
+								<li><a href="#!">teams</a></li>
+								<li><a href="#!">news</a></li>
+								<li><a href="#!">games</a></li>
+								<li><a href="#!">cups &amp; clubs</a></li>
+								<li><a href="#!">tickets</a></li>
+								<li><a href="#!">store</a></li>
+								<li><a href="profile.html">my account</a></li>
+								<li><a href="registration.html" class="active">sign in or learn more</a></li>
+							</ul>
+						</nav><!-- navbar -->
+					</div><!-- top-menu -->
+				</div><!-- row -->
+				<div class="row">
+					<div class="user-menu">
+						<nav class="nav-wrap">
+							<ul class="nav">
+								<li><a href="preferences.html">my purchase history</a></li>
+								<li><a href="registration.html" class="active">my settings</a></li>
+							</ul>
+						</nav><!-- nav-wrap -->
+					</div><!-- user-menu -->
+				</div><!-- row -->
+				<div class="row  main-offset">
+					<div class="col-md-12">
+						<div class="tbl-container">
+							<div class="table-responsive">
+
+								<div class="tbl-header">
+									<div class="tbl-seils">
+										<div class="date">
+											Date: <span>15/02/2016</span>
+										</div>
+										<div class="sale-id">
+											Sale ID:<span> 002</span>
+										</div>
+										<div class="contract-num">
+											Contract Number:<span> 525</span>
+										</div>
+									</div>
+								</div>
+								<div class="tbl-body">
+									<table class="table tbl-seils">
+										<tbody>
+											<tr class="tickets">
+												<td>
+													<p>
+														<strong>SuperBowl LI</strong> at <span> NRG Stadium</span>  Houston Texas <span> Sun 05 Feb 2017</span><br>
+														<span class="email-color">Mail</span> deliver 100 Main Street, Houston, Texas 19678
+													</p>
+													<p class="tick">
+														20 Diamond C2 $12,999 $259,980
+													</p>
+													<a class="expand">
+														<i class="fa-compress"></i>
+													</a>
+													<div class="detail position">
+														<span class="label label-success">627 - A - 001</span>
+														<span class="label label-success">628 - B - 002</span>
+														<span class="label label-success">628 - B - 003</span>
+													</div>
+												</td>
+											</tr><!-- tickets -->
+											<tr class="product">
+												<td><span>Product:</span> 20 x Diamond Level Hospitality - $ 2,000 - $40,000</td>
+											</tr>
+											<tr class="product">
+												<td><span>Product:</span> 20 x Hyatt Regency Hotel Rooms - $ 2,000 - $40,000</td>
+											</tr>
+											<tr class="output">
+												<td>
+													<p class="out-label">
+														PRICE: <span>$259,980</span>
+														&nbsp;&nbsp;PAID: <span>$99,980</span>
+														&nbsp;&nbsp;OUTSTANDING: <span>$160,000</span>
+													</p>
+													<a class="expand">
+														<i class="fa-compress"></i>
+													</a>
+													<div class="paids">
+														<p>05 Jun 2016  Amex **1009 A Guest $40,980</p>
+														<p>09 Aug 2016  Visa **2345 A Guest $59,000</p>
+														<p><span  class="outstanding">Outstanding Balance:</span> $259,980 - $99,980 = $160,000</p>
+													</div>
+												</td>
+											</tr><!-- output --> 
+										</tbody>
+									</table>
+								</div>
+
+						</div><!-- table-responsive -->
+					</div><!-- tbl-container -->
+				</div><!-- row -->
+			</div><!-- container -->
+		</section><!-- section -->
+	</div>
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- custom scripts -->
+		<script src="assets/js/main.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+					$('.nav').children().click(function(e) {
+						e.preventDefault();
+						$('li').children().removeClass("active");
+						$(this).children().addClass("active");
+					});
+
+					//drop-down list 
+					$('.expand').click(function(e) {
+						e.preventDefault();
+						var notthis = $('.active').not(this);
+							notthis.find('.fa-expand').addClass('fa-compress').removeClass('fa-expand');
+						$(this).next('.detail').slideToggle();
+						$(this).next('.paids').slideToggle();
+						$(this).children('i').toggleClass('fa-compress fa-expand');
+					});
+
+			});
+		</script>
+	</body>
+</html>

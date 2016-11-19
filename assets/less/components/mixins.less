@@ -1,0 +1,81 @@
+//use http://www.font2web.com to generate all font formats
+.add-font(@font-url, @font-name, @weight: normal, @style: normal) {
+  font-family: @font-name;
+  src: url('@{font-folder}@{font-url}.eot'); // IE9 Compat Modes 
+  src: url('@{font-folder}@{font-url}.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
+       url('@{font-folder}@{font-url}.woff') format('woff'), // Pretty Modern Browsers 
+       url('@{font-folder}@{font-url}.ttf') format('truetype'), // Safari, Android, iOS 
+       url('@{font-folder}@{font-url}.svg#@{font-name}') format('svg'); // Legacy iOS  
+  font-weight: @weight;
+  font-style: @style;
+}
+
+.transition(@prop: all, @time: .5s, @ease: ease-in-out) {
+  transition: @prop @time @ease;
+}
+
+
+.bg-img(@img, @pos:center center, @att:scroll) {
+  background-image: url('@{img-folder}@{img}');
+  background-position: @pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: @att;
+}
+
+.bg-icons(@img, @pos:center center, @att:scroll) {
+  background-image: url('@{img-folder}@{img}');
+  background-position: @pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: @att;
+}
+
+.slider-logo(@img, @pos:center center, @att:scroll) {
+  background-image: url('@{img-folder}@{img}');
+  background-position: @pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: @att;
+}
+
+
+.main-logo(@img, @pos:center center, @att:scroll) {
+  background-image: url('@{img-folder}@{img}');
+  background-position: @pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: @att;
+}
+
+.footer-img(@img, @pos:center center, @att:scroll) {
+  background-image: url('@{img-folder}@{img}');
+  background-position: @pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: @att;
+}
+
+.tbl-cell(@img, @pos:center center, @att:scroll) {
+  background-image: url('@{img-folder}@{img}');
+  background-position: @pos;
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-attachment: @att;
+}
+
+.registr-img(@img, @pos:center center, @att:scroll) {
+  background-image: url('@{img-folder}@{img}');
+  background-position: @pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: @att;
+}
+
+.account-img(@img, @pos:center center, @att:scroll) {
+  background-image: url('@{img-folder}@{img}');
+  background-position: @pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: @att;
+}

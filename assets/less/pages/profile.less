@@ -1,0 +1,234 @@
+#SportolutionsApp {
+.profile {
+  .account-img('slide_3.jpg');
+  -ms-behavior: url(/assets/ie8-support/backgroundsize.min.htc);
+  max-width:1920px;
+  position: relative;
+}
+
+.account {
+  // max-width: 500px;
+  // margin: 0 auto;
+  margin: 190px auto;
+  width: 60%;
+  padding: 20px;
+
+  h1 {
+    font-size: 26px;
+    line-height: 3;
+    margin-bottom: 25px;
+    text-align: center;
+    .fa-camera-retro{
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      border: 2px solid #fff;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color .3s ease;
+      &:hover{
+        background-color: @grey-icon;
+      }
+    }
+  }
+
+  .address,
+  .date {
+
+    >div {
+      width: 25%;
+      display:inline-block;
+      margin-right:-5px;
+      position: relative;
+      &:after{
+        content: '';
+        border-right: 1px solid @font;
+        position: absolute;
+        top: 3px;
+        height: 80%;
+        right: -5px;
+        margin-right: 5px;
+      }
+      &:last-child:after{
+        display:none;
+      }
+    }
+
+    & .special {
+      width:35%;
+    }
+  }
+
+  .address {
+    > div {
+      width: 33.33333333333333%;
+    }
+  }
+
+  .form-label {
+    position: relative;
+    float: left;
+    margin-bottom: 30px;
+    width: 45%;
+    label,
+    & input,
+    & select {
+      font-family: 'HelveticaBold', sans-serif;
+      font-size: 1.714em;
+    }
+    & input,
+    & select {
+      //Reset styles
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      outline:none;
+      border: none;
+      width: 100%;
+      display:block;
+      cursor: pointer;
+      border-radius:0;
+      line-height: 1.2;
+
+      font-family: 'HelveticaBold', sans-serif;
+      font-size: 1.142em;
+      font-weight:bold;
+      border-bottom: 1px solid @font;
+      background: transparent;
+      color: @font;
+      padding: 15px 20px 7px 10px;
+    }
+    // hover на select
+    // & select option:hover,
+    // & select:focus > option:checked {
+      // background-color: @accent !important;
+    // }
+
+    label {
+      position: absolute;
+      left: 10px;
+      top: 18px;
+      color: #fff;
+      pointer-events: none;
+      .transition(all,.3s, ease);
+      &.active{
+        font-size: 1em;
+        top:-1px;
+        color: @accent;
+      }
+    }
+
+    .fa {
+       position: absolute;
+       right: 5px;
+       bottom: 20px;
+       font-size: 12px;
+    }
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .f-right {
+    float: right;
+  }
+
+  .btn {
+    font-family: 'HelveticaBold', sans-serif;
+    border: none;
+    width: 100%;
+    display:block;
+    padding: 15px;
+    background-color: @accent;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    .transition();
+    border-radius:0;
+    &:hover,
+    &:focus{
+      color: #333;
+      outline: none;
+    }
+  }
+}
+
+}// #SportolutionsApp
+
+@media (max-width:768px) {
+#SportolutionsApp {
+  .account {
+    h1 {
+      font-size:1.5em;
+    }
+    .form-label label {
+      font-size:1.3em;
+    }
+  }
+  // .form-label select {
+  //   font-size: 1em;
+  //   line-height: 1.2;
+  // }
+  }
+}
+
+@media(max-width:610px) {
+  #SportolutionsApp {
+    .account {
+      .form-label,
+      .f-right,
+      .address > div,
+      .date > div {
+        display: block;
+        float: left;
+        width: 100% !important;
+        &:after{
+          display:none;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:480px) {
+  #SportolutionsApp {
+    .account {
+      h1 {
+        font-size:1.1em;
+      }
+
+      .form-label input,
+      .form-label select {
+          font-size: 1em;
+      }
+    }
+  }
+}
+
+@media(max-width:320px) {
+  #SportolutionsApp {
+    .form-label {
+      margin-bottom: 18px;
+      & label {
+        font-size:1em;
+      }
+    }
+
+    .form-label label {
+      left: 0;
+    }
+
+    .form-label input,
+    .form-label select {
+      padding: 15px 5px 5px 0;
+    }
+
+    .btn {
+    //   margin-top: 15px;
+      font-size: 15px;
+      padding: 12px;
+    }
+  }
+}
